@@ -1,0 +1,11 @@
+manifest:
+  remotes:
+    - name: frnmjn
+      url-base: https://github.com/frnmjn
+  projects:
+    - name: zmk
+      remote: frnmjn
+      revision: main
+      import: app/west.yml
+  self:
+    path: config

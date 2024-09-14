@@ -1,0 +1,71 @@
+#define     AS_Q            &as_q DEF Q
+#define     AS_W            &as_w DEF W
+#define     AS_E            &as_e DEF E
+#define     AS_R            &as_r DEF R
+#define     AS_T            &as_t DEF T
+
+#define     AS_Y            &as_y DEF Y
+#define     AS_U            &as_u DEF U
+#define     AS_I            &as_i DEF I
+#define     AS_O            &as_o DEF O
+#define     AS_P            &as_p DEF P
+
+#define     HRM0            &hrm_a LGUI A
+#define     HRM1            &hrm_s LALT S
+#define     HRM2            &hrm_d LCTL D
+#define     HRM3            &hrm_f LSFT F
+#define     AS_G            &as_g DEF G
+
+#define     AS_H            &as_h DEF H
+#define     HRM6            &hrm_j LSFT J
+#define     HRM7            &hrm_k LCTL K
+#define     HRM8            &hrm_l LALT L
+#define     HRM9            &hrm_semi LGUI IT_SEMI
+
+#define     AS_Z            &as_z DEF Z
+#define     AS_X            &as_x DEF X
+#define     AS_C            &as_c DEF C
+#define     AS_V            &as_v DEF V
+#define     AS_B            &as_b DEF B
+
+#define     AS_N            &as_y DEF Y
+#define     AS_M            &as_u DEF U
+#define     AS_COMMA        &as_comma DEF IT_COMMA
+#define     AS_DOT          &as_dot DEF IT_DOT
+#define     AS_SLASH        &as_slash DEF IT_SLASH
+
+AS(    q,                  TAPPING_TERM_PINKY,      LS(Q))
+AS(    w,                  TAPPING_TERM_RING,       LS(W))
+AS(    e,                  TAPPING_TERM,            LS(E))
+AS(    r,                  TAPPING_TERM,            LS(R))
+AS(    t,                  TAPPING_TERM,            LS(T))
+
+AS(    y,                  TAPPING_TERM,            LS(Y))
+AS(    u,                  TAPPING_TERM,            LS(U))
+AS(    i,                  TAPPING_TERM,            LS(I))
+AS(    o,                  TAPPING_TERM_RING,       LS(O))
+AS(    p,                  TAPPING_TERM_PINKY,      LS(P))
+
+HRM_L( a,                  LS(A))
+HRM_L( s,                  LS(S))
+HRM_L( d,                  LS(D))
+HRM_L( f,                  LS(F))
+AS(    g,                  TAPPING_TERM,            LS(G))
+
+AS(    h,                  TAPPING_TERM,            LS(H))
+HRM_R( j,                  LS(J))
+HRM_R( k,                  LS(K))
+HRM_R( l,                  LS(L))
+HRM_R( semi,               IT_COLON)
+
+AS(    z,                  TAPPING_TERM_PINKY,      LS(Z))
+AS(    x,                  TAPPING_TERM_RING,       LS(X))
+AS(    c,                  TAPPING_TERM,            LS(C))
+AS(    v,                  TAPPING_TERM,            LS(V))
+AS(    b,                  TAPPING_TERM,            LS(B))
+
+AS(    n,                  TAPPING_TERM,            LS(N))
+AS(    m,                  TAPPING_TERM,            LS(M))
+AS(    comma,              TAPPING_TERM,            IT_LT)
+AS(    dot,                TAPPING_TERM_RING,       IT_GT)
+AS(    slash,              TAPPING_TERM_PINKY,      IT_QMARK)

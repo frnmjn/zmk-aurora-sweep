@@ -1,0 +1,57 @@
+/* Combo helper */
+#define ZMK_COMBO(NAME, TIMEOUT_MS, KEY_POSITIONS, LAYERS, BINDINGS) \
+    combo_##NAME { \
+        timeout-ms = <TIMEOUT_MS>; \
+        key-positions = <KEY_POSITIONS>; \
+        layers = <LAYERS>; \
+        bindings = <BINDINGS>; \
+    };
+
+#define AS(LETTER, TAPPING_TIME, RETRO_TAP) \
+    as_##LETTER: as_##LETTER { \
+        compatible = "zmk,behavior-hold-tap"; \
+        #binding-cells = <2>; \
+        flavor = "balanced"; \
+        tapping-term-ms = <TAPPING_TIME>; \
+        quick-tap-ms = <0>; \
+        bindings = <&mt>, <&kp>; \
+        retro-tap; \
+        retro-tap-behavior = "key_press"; \
+        retro-tap-param1 = <RETRO_TAP>; \
+    };
+
+#define HRM(LETTER, RETRO_TAP, hold_trigger_key_position) \
+    hrm_##LETTER: hrm_##LETTER { \
+        compatible = "zmk,behavior-hold-tap"; \
+        #binding-cells = <2>; \
+        flavor = "balanced"; \
+        tapping-term-ms = <280>; \
+        quick-tap-ms = <175>; \
+        require-prior-idle-ms = <150>; \
+        bindings = <&kp>, <&kp>; \
+        hold-trigger-key-positions = <hold_trigger_key_position>; \
+        hold-trigger-on-release; \
+        retro-tap; \
+        retro-tap-behavior = "key_press"; \
+        retro-tap-param1 = <RETRO_TAP>; \
+    };
+
+#define HRM_L(LETTER, RETRO_TAP) \
+    HRM(LETTER, RETRO_TAP, KEYS_R THUMBS)
+
+#define HRM_R(LETTER, RETRO_TAP) \
+    HRM(LETTER, RETRO_TAP, KEYS_L THUMBS)
+
+// /* Mod-Morph helper */
+#define MOD_MORPH(NAME, STANDARD, MORPHED, MODS) \
+    NAME: NAME { \
+        compatible = "zmk,behavior-mod-morph"; \
+        #binding-cells = <0>; \
+        bindings = <STANDARD>, <MORPHED>; \
+        mods = <(MODS)>; \
+    };
+    
+
+/* Mod-Morph that sends another key when Alt is held */
+#define ALT_MORPH(NAME, PRIMARY, ALTERNATE) \
+    MOD_MORPH(NAME, PRIMARY, ALTERNATE, MOD_LALT|MOD_RALT)

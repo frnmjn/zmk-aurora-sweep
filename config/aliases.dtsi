@@ -1,0 +1,64 @@
+#define DEF 0
+#define NAV 1
+#define NUM 2
+
+#define ALL_LAYERS DEF NAV NUM
+
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
+#define THUMBS LC1 LC0 RC0 RC1
+
+#define TAPPING_TERM 200
+#define TAPPING_TERM_RING 250
+#define TAPPING_TERM_PINKY 300
+#define COMBO_TERM 40
+
+#define XXX &none
+#define ___ &trans
+
+#define _SLASH &kp IT_SLASH
+#define _BSPC &kp BSPC
+#define _DEL &kp DEL
+#define _MINUS &kp MINUS
+#define _PLUS &kp PLUS
+#define _DOT &kp IT_DOT
+#define _SLASH &kp IT_SLASH
+#define _LCMD &kp LCMD
+
+#define _LEFT &kp LEFT
+#define _DOWN &kp DOWN
+#define _UP &kp UP
+#define _RIGHT &kp RIGHT
+#define _HOME &kp LG(LEFT)
+#define _END &kp LG(RIGHT)
+#define _PGUP &kp PGUP
+#define _PGDN &kp PGDN
+
+#define _UNDO &kp LG(Z)
+#define _CUT &kp LG(X)
+#define _COPY &kp LG(C)
+#define _PASTE &kp LG(P)
+#define _REDO &kp LG(LS(Z))
+#define _MEH &kp LC(LA(LSFT))
+
+#define _EAC &kp IT_E_ACUTE
+
+#define _LSFT &kp LSFT
+
+#define _0 &kp N1
+#define _1 &kp N1
+#define _2 &kp N2
+#define _3 &kp N3
+#define _4 &kp N4
+#define _5 &kp N5
+#define _6 &kp N6
+#define _7 &kp N7
+#define _8 &kp N8
+#define _9 &kp N9
+
+#define SPC_NAV &lt NAV SPACE
+#define MO_NUM &mo NUM
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
