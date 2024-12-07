@@ -8,13 +8,6 @@
         bindings = <&ASB##letter>, <&none>; \
     }; \
  \
-    asmm##letter: asmm##letter { \
-        compatible = "zmk,behavior-mod-morph"; \
-        #binding-cells = <0>; \
-        bindings = <&kp letter>, <&as LS(##letter) ##letter>; \
-        mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>; \
-    }; \
- \
     ASM##letter: ASM##letter { \
         compatible = "zmk,behavior-macro"; \
         #binding-cells = <0>; \
