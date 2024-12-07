@@ -1,9 +1,3 @@
-#define SK(KEY) &nk KEY KEY
-
-#define RMODS (MOD_RGUI|MOD_RSFT|MOD_RALT|MOD_RCTL)
-#define LMODS (MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)
-#define ALLMODS (MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL|MOD_RGUI|MOD_RSFT|MOD_RALT|MOD_RCTL)
-
 as: auto_shift {
     compatible = "zmk,behavior-hold-tap";
     label = "AUTO_SHIFT";
