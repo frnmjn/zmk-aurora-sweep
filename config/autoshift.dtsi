@@ -73,34 +73,6 @@ ASM(COMMA, TAPPING_TERM)
 ASM(DOT, TAPPING_TERM_RING)
 ASM(SLASH, TAPPING_TERM_PINKY)
 
-// ASM(BSLH, TAPPING_TERM)
-// ASM(MINUS, TAPPING_TERM)
-// ASM(SEMI, TAPPING_TERM)
-// ASM(GRAVE, TAPPING_TERM)
-// ASM(LBKT, TAPPING_TERM)
-// ASM(RBKT, TAPPING_TERM)
-// ASM(EQUAL, TAPPING_TERM)
-// ASM(TAB, TAPPING_TERM)
-// ASM(UP, TAPPING_TERM)
-// ASM(LEFT, TAPPING_TERM)
-// ASM(DOWN, TAPPING_TERM)
-// ASM(RIGHT, TAPPING_TERM)
-// ASM(INSERT, TAPPING_TERM)
-// ASM(PG_UP, TAPPING_TERM)
-// ASM(PG_DN, TAPPING_TERM)
-// ASM(HOME, TAPPING_TERM)
-// ASM(END, TAPPING_TERM)
-// ASM(N0, TAPPING_TERM)
-// ASM(N1, TAPPING_TERM)
-// ASM(N2, TAPPING_TERM)
-// ASM(N3, TAPPING_TERM)
-// ASM(N4, TAPPING_TERM)
-// ASM(N5, TAPPING_TERM)
-// ASM(N6, TAPPING_TERM)
-// ASM(N7, TAPPING_TERM)
-// ASM(N8, TAPPING_TERM)
-// ASM(N9, TAPPING_TERM)
-
 #define HRM(letter, mod, tapping_time) \
     hras##letter: hras##letter { \
         compatible = "zmk,behavior-hold-tap"; \
@@ -112,14 +84,6 @@ ASM(SLASH, TAPPING_TERM_PINKY)
         retro-tap; \
         retro-tap-behavior = "KEY_PRESS"; \
         retro-tap-param1 = <LS(letter)>; \
-    }; \
- \
-    hrt##letter: hrt##letter { \
-        compatible = "zmk,behavior-tap-dance"; \
-        #binding-cells = <0>; \
-        tapping-term-ms = <tapping_time>; \
-        bindings = <&hras##letter mod letter>, <&kp letter>; \
-        trigger-each-binding; \
     };
 
 HRM(A, LGUI, TAPPING_TERM_PINKY)
