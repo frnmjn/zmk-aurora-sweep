@@ -1,4 +1,0 @@
-
-ZMK_COMBO(enter,    &kp ENTER,      LM1 LM2)
-ZMK_COMBO(esc,      &kp ESC,        RM1 RM2)
-ZMK_COMBO(tab,      &kp TAB,        RM2 RM3)
