@@ -23,27 +23,16 @@
 #define HR(mod, keycode) &hr mod keycode
 #define CTL(keycode) &ctl LS(keycode)
 
-#define HR0 &hr A, A
+#define HR0 &hr A A
 
 
 / {
-     // macros {
-     //    hr0: hr0 {
-     //        compatible = "zmk,behavior-macro";
-     //        #binding-cells = <0>;
-     //        bindings
-     //            = <&macro_press &kp LSHFT>
-     //            , <&macro_tap &kp A>
-     //            , <&macro_release &kp LSHFT>
-     //            ;
-     //    };
-     // };
      behaviors {
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -51,7 +40,7 @@
             compatible = "zmk,behavior-hold-tap";
             binding-cells = <1>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <LCTL>, <&kp>;
             retro_tap;
@@ -60,7 +49,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <TAPPING_TERM>;
-            quick_tap_ms = <0>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&ctl>, <&kp>;
         };
