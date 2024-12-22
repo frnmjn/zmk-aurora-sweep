@@ -20,7 +20,7 @@
 #define ___ &trans
 
 #define AS(keycode) &as LS(keycode) keycode
-#define HR(mod keycode) &mt <&rs LS(keycode) mod> <keycode>
+#define HR(mod, keycode) &mt <&rs LS(keycode) mod> <keycode>
 #define HR0 HR(LCTL, A)
 
 / {
