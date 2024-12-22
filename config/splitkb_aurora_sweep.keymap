@@ -20,13 +20,19 @@
 #define ___ &trans
 
 #define AS(keycode) &as LS(keycode) keycode
-#define HR(mod, keycode) &hr mod keycode
-#define CTL(keycode) &ctl LS(keycode)
-
-#define HR0 &hr LCTL LS(A)
-
+#define HR0 &hr A
+#define HR00 &hrrt LCTL LS(A)
 
 / {
+     macros {
+        thr: to_home_row {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&sl 1>
+                ;
+        };
+     };
      behaviors {
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -42,7 +48,16 @@
             tapping-term-ms = <TAPPING_TERM>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&sl>, <&kp>;
+            bindings = <&thr>, <&kp>;
+        };
+        hrrt: home_row {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <0>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            retro-tap;
         };
      };
      keymap {
@@ -95,7 +110,7 @@
                // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                     AS(Q)         XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    XXX           XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
+                    HR0           XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     XXX           XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
                // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
@@ -109,7 +124,7 @@
                // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                     XXX           XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    HR0           XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
+                    HR00          XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     XXX           XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
                // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
