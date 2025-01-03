@@ -22,17 +22,17 @@
 #define AS(keycode) &as LS(keycode) keycode
 
 #define HRM(letter, mod, tapping_time) \
-    hrm##letter: home_row##letter { \
-            compatible = "zmk,behavior-hold-tap"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <TAPPING_TERM>; \
-            quick-tap-ms = <0>; \
-            flavor = "tap-preferred"; \
-            bindings = <&kp>, <&kp>; \
-            retro-tap; \
-            retro-tap-behavior = "key_press"; \
-            retro-tap-param1 = <LS(letter)>; \
-        };
+     hrm##letter: hrm##letter { \
+          compatible = "zmk,behavior-hold-tap"; \
+          #binding-cells = <2>; \
+          tapping-term-ms = <TAPPING_TERM>; \
+          quick-tap-ms = <0>; \
+          flavor = "tap-preferred"; \
+          bindings = <&kp>, <&kp>; \
+          retro-tap; \
+          retro-tap-behavior = "key_press"; \
+          retro-tap-param1 = <LS(letter)>; \
+     };
 
 #define HRM0 &hrmA LGUI A
 #define HRM1 &hrmS LCTL S
@@ -47,8 +47,8 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        HRM(A, LGUI, 200);
-        HRM(S, LCTL, 200);
+        HRM(A, LGUI, 200)
+        HRM(S, LCTL, 200)
      };
      keymap {
           compatible = "zmk,keymap";
