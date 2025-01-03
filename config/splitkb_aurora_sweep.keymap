@@ -14,7 +14,7 @@
 #define TAPPING_TERM 200
 #define TAPPING_TERM_RING 250
 #define TAPPING_TERM_PINKY 300
-#define QUICK_TAP_TERM 300
+#define QUICK_TAP_TERM 0
 
 #define XXX &none
 #define ___ &trans
@@ -40,6 +40,8 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             retro-tap;
+            retro-tap-behavior = "key_press";
+            retro-tap-param1 = <LS(A)>;
         };
      };
      keymap {
