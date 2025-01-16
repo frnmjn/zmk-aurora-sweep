@@ -23,6 +23,9 @@
 #define _END    &kp LG(RIGHT)
 #define _SLASH  &kp IT_SLASH
 
+#define SPC_NAV &lt NAV SPACE
+#define _BSPC   &kp BSPC
+
 #define AS(keycode) &as LS(keycode) keycode
 
 #define HRM(letter, mod, tapping_time) \
@@ -40,12 +43,12 @@
 
 #define HRM0 &hrmA LGUI A
 #define HRM1 &hrmS LALT S
-#define HRM2 &hrmA LCTL D
-#define HRM3 &hrmS LSFT F
-#define HRM6 &hrmA LSFT J
-#define HRM7 &hrmS LCTZ K
-#define HRM8 &hrmA LALT L
-#define HRM9 &hrmS LGUI _SLASH
+#define HRM2 &hrmD LCTL D
+#define HRM3 &hrmF LSFT F
+#define HRM6 &hrmJ LSFT J
+#define HRM7 &hrmK LCTZ K
+#define HRM8 &hrmL LALT L
+#define HRM9 &hrmSLASH LGUI _SLASH
 
 / {
      behaviors {
@@ -75,9 +78,9 @@
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     HRM0          HRM1          HRM2          HRM3           AS(G)            AS(H)         HRM6          HRM7          HRM8          HRM9
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    AS(Z)         AS(X)         AS(C)         AS(V)         AS(B)              AS(N)        AS(M)         AS(COMMA)     AS(DOT)       AS(_SLASH)
+                    AS(Z)         AS(X)         AS(C)         AS(V)         AS(B)             AS(N)         AS(M)         AS(COMMA)     AS(DOT)       AS(_SLASH)
                // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
-                                                              XXX           &lt NAV SPACE     &kp BSPC      XXX       
+                                                              XXX           SPC_NAV           _BSPC         XXX       
                //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                >;
           };
