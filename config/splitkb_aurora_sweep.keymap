@@ -48,7 +48,7 @@
 #define HRM6 &hrmJ LSFT J
 #define HRM7 &hrmK LCTZ K
 #define HRM8 &hrmL LALT L
-#define HRM9 &hrmSLASH LGUI _SLASH
+#define HRM9 &hrm_SLASH LGUI _SLASH
 
 / {
      behaviors {
@@ -67,7 +67,7 @@
         HRM(J,        RSFT, TAPPING_TERM)
         HRM(K,        RCTL, TAPPING_TERM)
         HRM(L,        LALT, TAPPING_TERM_RING)
-        HRM(SLASH,    RGUI, TAPPING_TERM_PINKY)
+        HRM(_SLASH,   RGUI, TAPPING_TERM_PINKY)
      };
      keymap {
           compatible = "zmk,keymap";
