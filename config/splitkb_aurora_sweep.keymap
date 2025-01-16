@@ -36,12 +36,12 @@
 
 #define HRM0 &hrmA LGUI A
 #define HRM1 &hrmS LALT S
-#define HRM0 &hrmA LCTL D
-#define HRM1 &hrmS LSFT F
-#define HRM0 &hrmA LSFT J
-#define HRM1 &hrmS LCTZ K
-#define HRM0 &hrmA LALT L
-#define HRM1 &hrmS LGUI IT_SLASH
+#define HRM2 &hrmA LCTL D
+#define HRM3 &hrmS LSFT F
+#define HRM6 &hrmA LSFT J
+#define HRM7 &hrmS LCTZ K
+#define HRM8 &hrmA LALT L
+#define HRM9 &hrmS LGUI IT_SLASH
 
 / {
      behaviors {
@@ -83,7 +83,7 @@
                // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                     XXX           XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &kp LG(LEFT) XXX           XXX           XXX           XXX                &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp LG(RIGHT)
+                    &kp LG(LEFT)  XXX           XXX           XXX           XXX               &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp LG(RIGHT)
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     XXX           XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
                // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
