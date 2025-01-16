@@ -41,14 +41,14 @@
           retro-tap-param1 = <LS(letter)>; \
      };
 
-#define HRM0 &hrmA LGUI A
-#define HRM1 &hrmS LALT S
-#define HRM2 &hrmD LCTL D
-#define HRM3 &hrmF LSFT F
-#define HRM6 &hrmJ LSFT J
-#define HRM7 &hrmK LCTZ K
-#define HRM8 &hrmL LALT L
-#define HRM9 &hrm_SLASH LGUI _SLASH
+#define HRM0 &hrmA            LGUI      A
+#define HRM1 &hrmS            LALT      S
+#define HRM2 &hrmD            LCTL      D
+#define HRM3 &hrmF            LSFT      F
+#define HRM6 &hrmJ            LSFT      J
+#define HRM7 &hrmK            LCTZ      K
+#define HRM8 &hrmL            LALT      L
+#define HRM9 &hrmIT_SLASH     LGUI      IT_SLASH
 
 / {
      behaviors {
@@ -67,7 +67,7 @@
         HRM(J,        RSFT, TAPPING_TERM)
         HRM(K,        RCTL, TAPPING_TERM)
         HRM(L,        LALT, TAPPING_TERM_RING)
-        HRM(_SLASH,   RGUI, TAPPING_TERM_PINKY)
+        HRM(IT_SLASH, RGUI, TAPPING_TERM_PINKY)
      };
      keymap {
           compatible = "zmk,keymap";
