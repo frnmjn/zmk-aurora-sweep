@@ -21,7 +21,7 @@
 
 #define _HOME   &kp LG(LEFT)
 #define _END    &kp LG(RIGHT)
-#define _SLASH  &kp IT_SLASH
+#define _SLASH  IT_SLASH
 
 #define SPC_NAV &lt NAV SPACE
 #define _BSPC   &kp BSPC
@@ -48,7 +48,7 @@
 #define HRM6 &hrmJ            LSFT      J
 #define HRM7 &hrmK            LCTZ      K
 #define HRM8 &hrmL            LALT      L
-#define HRM9 &hrmIT_SLASH     LGUI      IT_SLASH
+// #define HRM9 &hrmIT_SLASH     LGUI      IT_SLASH
 
 / {
      behaviors {
@@ -67,7 +67,7 @@
         HRM(J,        RSFT, TAPPING_TERM)
         HRM(K,        RCTL, TAPPING_TERM)
         HRM(L,        LALT, TAPPING_TERM_RING)
-        HRM(IT_SLASH, RGUI, TAPPING_TERM_PINKY)
+     //    HRM(IT_SLASH, RGUI, TAPPING_TERM_PINKY)
      };
      keymap {
           compatible = "zmk,keymap";
@@ -76,9 +76,9 @@
                // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                     AS(Q)         AS(W)         AS(E)         AS(R)          AS(T)            AS(Y)         AS(U)         AS(I)         AS(O)         AS(P)
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    HRM0          HRM1          HRM2          HRM3           AS(G)            AS(H)         HRM6          HRM7          HRM8          HRM9
+                    HRM0          HRM1          HRM2          HRM3           AS(G)            AS(H)         HRM6          HRM7          HRM8          XXX
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    AS(Z)         AS(X)         AS(C)         AS(V)         AS(B)             AS(N)         AS(M)         AS(COMMA)     AS(DOT)       AS(_SLASH)
+                    AS(Z)         AS(X)         AS(C)         AS(V)         AS(B)             AS(N)         AS(M)         AS(COMMA)     AS(DOT)       XXX
                // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
                                                               XXX           SPC_NAV           _BSPC         XXX       
                //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
