@@ -20,15 +20,32 @@
 #define TAPPING_TERM_PINKY 300
 #define QUICK_TAP_TERM 0
 
-#define XXX &none
-#define ___ &trans
+#define XXX     &none
+#define ___     &trans
 
+#define _SLASH  &kp IT_SLASH
+#define _BSPC   &kp BSPC
+
+#define _LEFT   &kp LEFT      
+#define _DOWN   &kp DOWN      
+#define _UP     &kp UP        
+#define _RIGHT  &kp RIGHT
 #define _HOME   &kp LG(LEFT)
 #define _END    &kp LG(RIGHT)
-#define _SLASH  IT_SLASH
+
+#define _1      &kp N1
+#define _2      &kp N2
+#define _3      &kp N3
+#define _4      &kp N4
+#define _5      &kp N5
+#define _6      &kp N6
+#define _7      &kp N7
+#define _8      &kp N8
+#define _9      &kp N9
 
 #define SPC_NAV &lt NAV SPACE
-#define _BSPC   &kp BSPC
+#define MO_NUM  &mo NUM
+
 
 #define AS(keycode) &as LS(keycode) keycode
 
@@ -83,9 +100,9 @@
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     HRM0          HRM1          HRM2          HRM3          AS(G)             AS(H)         HRM6          HRM7          HRM8          HRM9          
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    AS(Z)         AS(X)         AS(C)         AS(V)         AS(B)             AS(N)         AS(M)         AS(COMMA)     AS(DOT)       XXX
+                    AS(Z)         AS(X)         AS(C)         AS(V)         AS(B)             AS(N)         AS(M)         AS(COMMA)     AS(DOT)       AS(IT_SLASH)
                // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
-                                                              XXX           SPC_NAV           _BSPC         XXX       
+                                                              MO_NUM        SPC_NAV           _BSPC         XXX       
                //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                >;
           };
@@ -95,7 +112,7 @@
                // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                     XXX           XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    _HOME         XXX           XXX           XXX           XXX               &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     _END
+                    _HOME         XXX           XXX           XXX           XXX               _LEFT         _DOWN         _UP           _RIGHT        _END
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     XXX           XXX           XXX           XXX           XXX               XXX           XXX           XXX           XXX           XXX
                // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
@@ -107,13 +124,13 @@
           number {
                bindings = <
                // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                    XXX           XXX           XXX           XXX           XXX               XXX           &kp N7        &kp N8        &kp N9           XXX
+                    XXX           XXX           XXX           XXX           XXX               XXX           _N7           _N8           _N9           XXX
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    XXX           XXX           XXX           XXX           XXX               XXX           &kp N4        &kp N5        &kp N6           XXX
+                    XXX           XXX           XXX           XXX           XXX               XXX           _N4           _N5           _N6           XXX
                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    XXX           XXX           XXX           XXX           XXX               XXX           &kp N1        &kp N2        &kp N3           XXX
+                    XXX           XXX           XXX           XXX           XXX               XXX           _N1           _N2           _N3           XXX
                // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
-                                                              XXX           XXX               XXX           XXX       
+                                                              XXX           XXX               ___           XXX       
                //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
                >;
           };
