@@ -46,7 +46,7 @@
 #define HRM2 &hrmD            LCTL      D
 #define HRM3 &hrmF            LSFT      F
 #define HRM6 &hrmJ            LSFT      J
-#define HRM7 &hrmK            LCTZ      K
+#define HRM7 &hrmK            LCTL      K
 #define HRM8 &hrmL            LALT      L
 // #define HRM9 &hrmIT_SLASH     LGUI      IT_SLASH
 
