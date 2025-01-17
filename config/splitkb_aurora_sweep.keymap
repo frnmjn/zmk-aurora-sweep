@@ -11,6 +11,10 @@
 #include "34_labels.h"
 #include "italian_keys.h"
 
+#define DEF 0
+#define NAV 1
+#define NUM 2
+
 #define TAPPING_TERM 200
 #define TAPPING_TERM_RING 250
 #define TAPPING_TERM_PINKY 300
