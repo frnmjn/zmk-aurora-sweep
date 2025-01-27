@@ -66,6 +66,6 @@ AS(    b,                  TAPPING_TERM,            LS(B))
 
 AS(    n,                  TAPPING_TERM,            LS(N))
 AS(    m,                  TAPPING_TERM,            LS(M))
-AS(    comma,              TAPPING_TERM,            IT_LT)
-AS(    dot,                TAPPING_TERM_RING,       IT_GT)
+AS(    comma,              TAPPING_TERM,            IT_LESS_THAN)
+AS(    dot,                TAPPING_TERM_RING,       IT_GREATER_THAN)
 AS(    slash,              TAPPING_TERM_PINKY,      IT_QMARK)
