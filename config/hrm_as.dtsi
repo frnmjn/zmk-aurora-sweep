@@ -20,7 +20,7 @@
 #define     HRM6            &hrm_j LSFT J
 #define     HRM7            &hrm_k LCTL K
 #define     HRM8            &hrm_l LALT L
-#define     HRM9            &hrm_semi LGUI IT_SEMI
+#define     HRM9            &hrm_semi LGUI SEMI
 
 #define     AS_Z            &as_z DEF Z
 #define     AS_X            &as_x DEF X
@@ -30,9 +30,9 @@
 
 #define     AS_N            &as_y DEF N
 #define     AS_M            &as_u DEF M
-#define     AS_COMMA        &as_comma DEF IT_COMMA
-#define     AS_DOT          &as_dot DEF IT_DOT
-#define     AS_SLASH        &as_slash DEF IT_SLASH
+#define     AS_COMMA        &as_comma DEF COMMA
+#define     AS_DOT          &as_dot DEF DOT
+#define     AS_SLASH        &as_slash DEF SLASH
 
 AS(    q,                  TAPPING_TERM_PINKY,      LS(Q))
 AS(    w,                  TAPPING_TERM_RING,       LS(W))

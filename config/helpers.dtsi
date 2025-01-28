@@ -42,16 +42,16 @@
 #define HRM_R(LETTER, RETRO_TAP) \
     HRM(LETTER, RETRO_TAP, KEYS_L THUMBS)
 
-// /* Mod-Morph helper */
-#define MOD_MORPH(NAME, STANDARD, MORPHED, MODS) \
-    NAME: NAME { \
-        compatible = "zmk,behavior-mod-morph"; \
-        #binding-cells = <0>; \
-        bindings = <STANDARD>, <MORPHED>; \
-        mods = <(MODS)>; \
-    };
+// // /* Mod-Morph helper */
+// #define MOD_MORPH(NAME, STANDARD, MORPHED, MODS) \
+//     NAME: NAME { \
+//         compatible = "zmk,behavior-mod-morph"; \
+//         #binding-cells = <0>; \
+//         bindings = <STANDARD>, <MORPHED>; \
+//         mods = <(MODS)>; \
+//     };
     
 
-/* Mod-Morph that sends another key when Alt is held */
-#define ALT_MORPH(NAME, PRIMARY, ALTERNATE) \
-    MOD_MORPH(NAME, PRIMARY, ALTERNATE, MOD_LALT|MOD_RALT)
+// /* Mod-Morph that sends another key when Alt is held */
+// #define ALT_MORPH(NAME, PRIMARY, ALTERNATE) \
+//     MOD_MORPH(NAME, PRIMARY, ALTERNATE, MOD_LALT|MOD_RALT)

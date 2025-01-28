@@ -16,13 +16,13 @@
 #define XXX &none
 #define ___ &trans
 
-#define _SLASH &kp IT_SLASH
+#define _SLASH &kp SLASH
 #define _BSPC &kp BSPC
 #define _DEL &kp DEL
 #define _MINUS &kp MINUS
 #define _PLUS &kp PLUS
-#define _DOT &kp IT_DOT
-#define _SLASH &kp IT_SLASH
+#define _DOT &kp DOT
+#define _SLASH &kp SLASH
 #define _LCMD &kp LCMD
 
 #define _LEFT &kp LEFT
@@ -40,8 +40,6 @@
 #define _PASTE &kp LG(P)
 #define _REDO &kp LG(LS(Z))
 #define _MEH &kp LC(LA(LSFT))
-
-#define _EAC &kp IT_E_ACUTE
 
 #define _LSFT &kp LSFT
 

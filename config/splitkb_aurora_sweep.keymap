@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #include "34_labels.h"
-#include "italian_keys.h"
+// #include "italian_keys.h"
 
 #include "aliases.dtsi"
 #include "helpers.dtsi"
@@ -22,7 +22,6 @@
 
      behaviors {
           #include "hrm_as.dtsi"
-          ALT_MORPH(e_acute, &kp E, _EAC)
      };
      
      keymap {
