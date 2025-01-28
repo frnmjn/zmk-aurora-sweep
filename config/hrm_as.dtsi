@@ -28,8 +28,8 @@
 #define     AS_V            &as_v DEF V
 #define     AS_B            &as_b DEF B
 
-#define     AS_N            &as_y DEF Y
-#define     AS_M            &as_u DEF U
+#define     AS_N            &as_y DEF N
+#define     AS_M            &as_u DEF M
 #define     AS_COMMA        &as_comma DEF IT_COMMA
 #define     AS_DOT          &as_dot DEF IT_DOT
 #define     AS_SLASH        &as_slash DEF IT_SLASH
@@ -56,7 +56,7 @@ AS(    h,                  TAPPING_TERM,            LS(H))
 HRM_R( j,                  LS(J))
 HRM_R( k,                  LS(K))
 HRM_R( l,                  LS(L))
-HRM_R( semi,               IT_COLON)
+HRM_R( semi,               COLON)
 
 AS(    z,                  TAPPING_TERM_PINKY,      LS(Z))
 AS(    x,                  TAPPING_TERM_RING,       LS(X))
@@ -66,6 +66,6 @@ AS(    b,                  TAPPING_TERM,            LS(B))
 
 AS(    n,                  TAPPING_TERM,            LS(N))
 AS(    m,                  TAPPING_TERM,            LS(M))
-AS(    comma,              TAPPING_TERM,            LS(IT_COMMA))
-AS(    dot,                TAPPING_TERM_RING,       LS(IT_DOT))
-AS(    slash,              TAPPING_TERM_PINKY,      IT_QUESTION)
+AS(    comma,              TAPPING_TERM,            LT)
+AS(    dot,                TAPPING_TERM_RING,       GT)
+AS(    slash,              TAPPING_TERM_PINKY,      QUESTION)
